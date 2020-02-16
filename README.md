@@ -1,0 +1,4 @@
+# Spell-Checker
+Bloom FIlter Based Spell Checker through Functional Programming
+
+Hashing can also be used to implement a spell checker.  Instead of com-paring a wordwwith entries in a dictionary of words, the word’s hash valueh(w) is used to index into a bitvector.  A bitvector is an array of booleans,i.e., each entry is either true (= 1) or false (= 0).  If bitvector(h(w)) = false,wis spelled incorrectly.  The bitvector is created by applying a hash functionto each wordwin the directory, setting the the bitvector to true (:= 1) forthe computed hash value, i.e., bitvector(h(w)) := 1 for allwin the dictionary.Typically, the memory requirement of a dictionary of words is much largerthan  the  memory  requirement  of  its  corresponding  bitvector.   In  addition,indexing into the bitvector (or any other array data structure) is typicallymuch faster than using any lookup technique based on string comparisons.
